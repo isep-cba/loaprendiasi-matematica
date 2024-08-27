@@ -2,30 +2,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo Aprendimos Así - Contar</title>
-    <!--BOOTSTRAP-->
-    <!--LIBRERIAS DE ANIMACION-->
-    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- The video -->
-<video autoplay muted loop id="myVideo">
-    <source src="video/01-exterior.mp4" type="video/mp4">
-  </video>
-  
-  <!-- Optional: some overlay text to describe the video -->
-  <div class="content">
-    <div class="caja-texto">
-        <h1>Aprendí Así</h1>
-        <p>Saber recitar la serie no es lo mismo que saber contar los elementos de una colección. </p>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    </div>
-  </div>
-  <button id="myBtn" onclick="myFunction()">Pause</button>
+    <section class="scroll-wrapper">
+        
+        <div class="scroll-element">
+            <video autoplay muted loop id="myVideo">
+                <source src="video/01-exterior.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <div class="caja-texto">
+                    <h1>Aprendí Así</h1>
+                    <p>Saber recitar la serie no es lo mismo que saber contar los elementos de una colección. </p>
+                </div>
+            </div>
+              <!-- Boton pausa -->
+            <button id="myBtn" onclick="myFunction()">Pausa</button>
+        </div>
 
-    
-<script src="scripts.js"></script>
-
-    
+        <article class="scroll-element">
+            <h1>
+                Pag1
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
+            </p>
+        </article>
+        <article class="scroll-element">
+            <h1>
+                Pag2
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
+            </p>
+        </article>
+        <article class="scroll-element">
+            <h1>
+                Pag3
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
+            </p>
+        </article>
+    </section>
 </body>
 </html>

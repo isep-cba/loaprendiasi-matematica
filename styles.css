@@ -4,17 +4,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.snap-block {
-  scroll-snap-type: y mandatory;
+.scroll-wrapper {
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
-.snap-section {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
-.videofull {
-  position: fixed;
+.scroll-element {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -24,7 +24,8 @@
     top: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: 0;
+    z-index: -1;
+    overflow: hidden;
   }
   
   /* Add some content at the bottom of the video/page */
@@ -43,6 +44,7 @@
 
   .caja-texto {
     position: relative;
+    z-index: 1;
     width: 50cqw;
     top: 50dvh;
     -ms-transform: translateY(-50%);
@@ -53,6 +55,7 @@
   .caja-texto p, h1 {
     line-height: 2em;
     margin-bottom: 1em;
+    z-index: 1;
   }
   
   /* Style the button used to pause/play the video */
