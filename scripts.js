@@ -1,5 +1,5 @@
 // Get the video
-var video = document.getElementById("myVideo");
+var video = document.getElementById("videoUno");
 
 // Get the button
 var btn = document.getElementById("myBtn");

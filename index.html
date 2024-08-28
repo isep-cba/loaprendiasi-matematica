@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -8,27 +9,20 @@
 <body>
     <section class="scroll-wrapper">
         
-        <div class="scroll-element">
-            <video autoplay muted loop id="myVideo">
-                <source src="video/01-exterior.mp4" type="video/mp4">
-            </video>
-            <div class="content">
-                <div class="caja-texto">
-                    <h1>Aprendí Así</h1>
-                    <p>Saber recitar la serie no es lo mismo que saber contar los elementos de una colección. </p>
-                </div>
-            </div>
-              <!-- Boton pausa -->
-            <button id="myBtn" onclick="myFunction()">Pausa</button>
-        </div>
 
         <article class="scroll-element">
-            <h1>
-                Pag1
-            </h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
-            </p>
+
+            <div class="video-container">
+                <video autoplay muted loop id="videoUno" onclick="myFunction()">
+                    <source src="video/01-exterior.mp4" type="video/mp4" />
+                </video>
+                <div class="caption">
+                    <div class="caja-texto">
+                    <h2>APRENDI ASI</h2>
+                </div>
+                    <button id="myBtn" onclick="myFunction()">Pausa</button>
+                </div>
+            </div>
         </article>
         <article class="scroll-element">
             <h1>
@@ -47,5 +41,9 @@
             </p>
         </article>
     </section>
+
+
+    <script src="scripts.js"></script>
+
 </body>
 </html>
