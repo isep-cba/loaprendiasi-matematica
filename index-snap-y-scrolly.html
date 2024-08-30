@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-snap-y-scrolly.css">
     <link rel="stylesheet" href="scrollys.css">
 
 </head>
 <body>
-  <main>
-    <section class="vh100">
-        <div class="video-container" onclick="myFunction()">
-          <video autoplay muted loop id="videoUno" >
-            <source src="video/01-exterior.mp4" type="video/mp4" />
-          </video>
-          <div class="caption">
-            <div class="caja-texto" style="max-width: 90vw;">
-              <p>
-              <img style="max-height: 15vh; max-width: 90vw;" src="https://loaprendimosasi.my.canva.site/images/6c70f011509b81d2789401a1f69ea24f.png" alt="">
-              </p>
-              
-               <p>Scrollea para continuar</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="vh100 mapa">
-        <div class="esquema">
-          <img src="img/diagrama.svg" alt="" style="width: 300px;">
-        </div>
-      </section>
-      <section class="vh100">
-        <h1>Pag3</h1>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
-        </p>
+    <main>
+    <section class="scroll-wrapper">
+        
+
+        <article class="scroll-element">
+
+            <div class="video-container">
+                <video autoplay muted loop id="videoUno" onclick="myFunction()">
+                    <source src="video/01-exterior.mp4" type="video/mp4" />
+                </video>
+                <div class="caption">
+                    <div class="caja-texto">
+                    <h2>APRENDI ASI</h2>
+                </div>
+                    <button id="myBtn" onclick="myFunction()">Pausa</button>
+                </div>
+            </div>
+        </article>
+        <article class="scroll-element">
+            <h1>
+                Pag2
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
+            </p>
+        </article>
+        <article class="scroll-element">
+            <h1>
+                Pag3
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
+            </p>
+        </article>
     </section>
 
     <section id="scrolly">
@@ -54,12 +61,10 @@
           <div class="step" data-step="Batalla" data-size="200%" data-position="10% 80%">
             <p>Tras reunirse el 9 de febrero en el Campamento de Curimón las columnas que cruzaron los Andes por "camino de Los Patos" junto con las que cruzaron por el "camino de Uspallata", se resolvió atacar en la madrugada del día 12. Con el fin de emplear una táctica de pinzas por el frente y la retaguardia, se dividieron a las tropas disponibles en dos:
             </p>
-            <p>
             <audio controls>
                 <source src="audio/batalla-chacabuco.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
               </audio>
-            </p>
           </div>
           <div class="step" data-step="Batalla" data-size="180%" data-position="80% 90%">
             <p>La 1.ª División o ala derecha al mando de Miguel Estanislao Soler que debía atacar por el oeste, estaba compuesta por los batallones N.º 1 de Cazadores y Nº11, las compañías de Granaderos y Cazadores de los Batallones N.º 7 y N.º 8, el escuadrón N.º 4 de Granaderos, el escuadrón escolta del general en jefe y 7 piezas de artillería de 4" con 80 artilleros de dotación. Ascendía el total de esta columna a 2000 hombres.
@@ -86,7 +91,9 @@
         </aside>
       </section>
 
-    
+      <section>
+        <div id="outro" style="width: 100%; margin: 0; align-items: center; justify-content: center; line-height: 2em; padding-top: 15vh; color: beige; background-color: black;"> Cierre </div> 
+      </section>
     </main>
 
 

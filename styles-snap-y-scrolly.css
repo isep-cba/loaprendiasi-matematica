@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scroll-wrapper {
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-element {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+/* Style the video: 100% width and height to cover the entire window 
+#myVideo {
+    position: static;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  */
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 100dvh;
+    width: 80%;
+    background: linear-gradient(to right, #000000dd, #00000000);
+    color: #f1f1f1;
+    line-height: 2em;
+    padding: 0dvh 10dvw;
+  }
+
+  
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    opacity: 40%;
+    position: relative;
+    top: 90%;
+    left: 90%;
+    transform: translateX(-50%);
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+
+
+  /* VIDEO CONTAINER */
+
+.video-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  height: 100dvh;
+  color: #f1f1f1;
+  line-height: 2em;
+  padding: 0dvh;
+  z-index: 1;
+  position: relative;
+  color: #ede8e8;
+  padding: 10px;
+  background: #301647c9;
+}
+
+.video-container .caja-texto {
+  position: relative;
+  z-index: 1;
+  width: 100cqw;
+  top: 50dvh;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+
+.video-container .caja-texto p, h1 {
+  line-height: 2em;
+  margin-bottom: 1em;
+  z-index: 1;
+}

@@ -1,0 +1,63 @@
+#scrolly {
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 0rem;
+  }
+
+  aside {
+    position: relative;
+    padding: 0;
+    max-width: 30rem;
+    left: 50%;
+  }
+
+  .sticky-thing {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url(img/img-01.jpg);
+    background-size: 100%;
+    background-position: 50% 50%;
+    z-index: 0;
+    top: 0vh;
+    height: 100vh;
+    /* Center everything inside */
+   
+    transition: 2s;
+  }
+
+  .sticky-thing p {
+    padding-left: 15vh;
+    padding-top: 15vh;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    filter: drop-shadow(5px 5px 5px #05050566);
+    transition: 1s;
+  }
+
+  .step {
+    margin: 0 auto 90vh auto;
+    color: #fff;
+    background-color: #3b3b3b28;
+  }
+
+  .step:last-child {
+    margin-bottom: 0;
+  }
+
+  .step.is-active p {
+    background-color: #0f0f0f93;
+    color: #ffffff;
+  }
+
+  .step p {
+    text-align: left;
+    padding: 1.5em;
+    font-size: 1rem;
+    background-color: #0f0f0f31;
+    color: #505050;
+  }
