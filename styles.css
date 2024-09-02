@@ -1,3 +1,8 @@
+:root {
+  --violeta: #301647;
+  --beige: beige;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -21,6 +26,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.m2 {
+  margin: 2em;
+}
+
+.p2 {
+  padding: 2em;
 }
 
 

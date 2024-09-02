@@ -6,21 +6,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="scrollys.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@vime/core@^5/themes/default.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@vime/core@^5/themes/light.css"
+    />
+  
 
 </head>
 <body>
   <main>
+
     <section class="vh100">
         <div class="video-container" onclick="myFunction()">
           <video autoplay muted loop id="videoUno" >
             <source src="video/01-exterior.mp4" type="video/mp4" />
           </video>
+          
           <div class="caption">
             <div class="caja-texto" style="max-width: 90vw;">
               <p>
               <img style="max-height: 15vh; max-width: 90vw;" src="https://loaprendimosasi.my.canva.site/images/6c70f011509b81d2789401a1f69ea24f.png" alt="">
               </p>
-              
                <p>Scrollea para continuar</p>
             </div>
           </div>
@@ -32,11 +42,17 @@
           <img src="img/diagrama.svg" alt="" style="width: 300px;">
         </div>
       </section>
-      <section class="vh100">
+
+      <section class="vh100 p2">
+        <div class="container">
         <h1>Pag3</h1>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
         </p>
+        <audio controls>
+            <source src="assets/grenade-bounce.mp3">
+        </audio>
+    </div>
     </section>
 
     <section id="scrolly">
@@ -56,7 +72,7 @@
             </p>
             <p>
             <audio controls>
-                <source src="audio/batalla-chacabuco.mp3" type="audio/mpeg">
+                <source src="assets/grenade-bounce.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
               </audio>
             </p>
@@ -78,7 +94,7 @@
             </p>
             <p>
               <audio controls>
-                <source src="audio/batalla-chacabuco.mp3" type="audio/mpeg">
+                <source src="assets/grenade-bounce.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
               </audio>
             </p>
@@ -92,23 +108,31 @@
 
     <script src="scripts.js"></script>
     <div class='debug'></div>
+    
+    <!-- Vime video player -->
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@vime/core@^5/dist/vime/vime.esm.js"
+    ></script>
+
+    <!-- Intersection observer -->
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+    <!-- Scrollama -->
     <script src="https://unpkg.com/scrollama"></script>
     <script>
-        // SCROLLAMA
+    // using d3 for convenience
+    var main = document.querySelector("main");
+    var scrolly = main.querySelector("#scrolly");
+    var sticky = scrolly.querySelector(".sticky-thing");
+    var article = scrolly.querySelector("aside");
+    var steps = article.querySelectorAll(".step");
 
-  // using d3 for convenience
-  var main = document.querySelector("main");
-  var scrolly = main.querySelector("#scrolly");
-  var sticky = scrolly.querySelector(".sticky-thing");
-  var article = scrolly.querySelector("aside");
-  var steps = article.querySelectorAll(".step");
+    // initialize the scrollama
+    var scroller = scrollama();
 
-  // initialize the scrollama
-  var scroller = scrollama();
-
-  // scrollama event handlers
-  function handleStepEnter(response) {
+    // scrollama event handlers
+    function handleStepEnter(response) {
     // response = { element, direction, index }
     var el = response.element;
 
@@ -137,10 +161,10 @@
 
     // setup resize event
     window.addEventListener("resize", scroller.resize);
-  }
+    }
 
-  // kick things off
-  init();
+    // kick things off
+    init();
     </script>
    
 </body>
