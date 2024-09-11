@@ -1,6 +1,8 @@
 :root {
-  --violeta: #301647;
-  --beige: beige;
+  --violeta: #383655;
+  --gris: #f2f2f2;
+  --celeste: #90a9b4;
+  --rosa: #da455b;
 }
 
 * {
@@ -9,9 +11,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.beige {
-  background-color: var(--beige);
+.gris {
+  background-color: var(--gris);
 }
+.violeta {
+  background-color: var(--violeta);
+  color: white;
+}
+
 .vh100 {
     height: 100vh;
     height: 100dvh;
@@ -43,7 +50,7 @@ vm-player {
 }
 
 .mapa {
-    background-color: beige;
+    background-color: var(--gris);
     display: flex;
     align-items: center;
     justify-content: center;

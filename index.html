@@ -20,6 +20,22 @@
 <body>
   <main>
 
+    <section class="vh100 p2 violeta">
+        <div class="container">
+          <h1>Presentación</h1>
+          <p>
+          Esta es una pieza…. (conciso, decir: qué es, quién la propone, para quiénes y para qué.)
+          </p>
+          <p>
+          Su objetivo es hacer visibles los procesos de pensamiento, resolutivos y cognitivos que los niños y las niñas hacen evidentes mediante las acciones de  explicar/narrar/jugar/contar/leer a partir de una consigna proporcionada con anterioridad.
+          </p>
+          <p>
+          Los registros audiovisuales que componen este material están acompañados de una serie de precisiones, comentarios y ampliaciones vinculados tanto con cuestiones conceptuales y procedimentales de la disciplina como con una serie de indicaciones para poder leer en claves pedagógica y didáctica las escenas escolares que aquí se muestran.
+          </p>
+          <button>Comenzar</button>
+        </div>
+      </section>
+
     <section class="vh100">
         <div class="video-container" onclick="myFunction()">
           <video autoplay muted loop id="videoUno" >
@@ -32,6 +48,9 @@
               <img style="max-height: 15vh; max-width: 90vw;" src="https://loaprendimosasi.my.canva.site/images/6c70f011509b81d2789401a1f69ea24f.png" alt="">
               </p>
                <p>Scrollea para continuar</p>
+               <audio loop autoplay>
+                <source src="assets/airtone-treetone.mp3">
+               </audio>
             </div>
           </div>
         </div>
@@ -73,13 +92,13 @@
           <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, vitae minus impedit minima natus dolore? Impedit velit sequi, doloremque aut, corporis culpa alias quas quasi quos necessitatibus fuga dolorum! Est.
           </p>
-          <audio controls>
+          <audio controls autoplay loop>
               <source src="assets/grenade-bounce.mp3">
           </audio>
         </div>
       </section>
 
-      <section class="vh100 p2 beige">
+      <section class="vh100 p2 gris">
         <div class="container">
             <vm-player>
               <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
@@ -152,6 +171,26 @@
     <script src="scripts.js"></script>
     <div class='debug'></div>
     
+    <!-- autoplay audio -->
+
+
+     <script>
+
+      var audioElem = document.querySelector("audio");
+      let playAttempt = setInterval(() => {
+        audioElem
+          .play()
+          .then(() => {
+            clearInterval(playAttempt);
+          })
+          .catch((error) => {
+            console.log("Unable to play the video, User has not interacted yet.");
+          });
+      }, 1000);
+     </script>
+
+
+
     <!-- Vime video player -->
     <script
         type="module"
