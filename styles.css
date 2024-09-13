@@ -10,8 +10,85 @@
     box-sizing: border-box;
     font-family: 'sauna-new';
     scroll-behavior: smooth;
-
   }
+
+  #aviso-giro {
+    height: 100vh;
+  }
+
+  @media screen and (orientation: landscape) {
+   #aviso-giro {
+      display: none;
+    }
+  }
+  
+  @media screen and (orientation: portrait) {
+    main {
+      display: none;
+    }
+  }
+
+/* boton de apertura */
+
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  border: 0px;
+  transition: 0.3s;
+  color: white;
+}
+
+.menu:hover {
+  background-color: #ee7a54;
+}
+
+/* estilos del menu lateral de indice */
+
+.sidenav {
+  height: 100%; 
+  width: 0; /* 0 width - cambiar el ancho abierto en scripts.js */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  padding-top: 40px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 2px 2px 2px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  color: #101046;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ee7a54;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* estilo del contenido general de la pagina */
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+/* para dispositivos donde la altura es menor a 450px */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+}
 
 html {
   font-size: 1.3em;
@@ -22,7 +99,6 @@ h1 {
   font-family: 'sauna-new';
   font-weight: 900;
   font-size: 3em;
-  color: var(--violeta)
 }
 
 p {
