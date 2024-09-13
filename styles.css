@@ -8,7 +8,44 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'sauna-new';
+    scroll-behavior: smooth;
+
+  }
+
+html {
+  font-size: 1.3em;
+}
+
+
+h1 {
+  font-family: 'sauna-new';
+  font-weight: 900;
+  font-size: 3em;
+  color: var(--violeta)
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.btn-comenzar {
+  background-color: var(--rosa);
+  color: var(--gris);
+  border: 0px solid;
+  border-radius: 15px;
+  padding: 0.4em 3em;
+  line-height: 4em;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+  transition: 0.2s;
+}
+
+
+.btn-comenzar:hover {
+  background-color: var(--celeste);
+  color: var(--violeta);
 }
 
 .gris {
