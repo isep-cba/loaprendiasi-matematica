@@ -12,6 +12,8 @@
     scroll-behavior: smooth;
   }
 
+/* AVISO ROTACION PANTALLA */
+
   #aviso-giro {
     height: 100vh;
   }
@@ -28,9 +30,19 @@
     }
   }
 
-/* boton de apertura */
+  .m2 {
+    margin: 2em;
+  }
+  
+  .p2 {
+    padding: 2em;
+  }
+  
+
+/* MENU */
 
 .menu {
+  z-index: 2;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -40,7 +52,7 @@
 }
 
 .menu:hover {
-  background-color: #ee7a54;
+  background-color: var(--violeta);
 }
 
 /* estilos del menu lateral de indice */
@@ -49,10 +61,10 @@
   height: 100%; 
   width: 0; /* 0 width - cambiar el ancho abierto en scripts.js */
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
-  background-color: #f0f0f0;
+  background-color: var(--gris);
   overflow-x: hidden;
   padding-top: 40px;
   transition: 0.5s;
@@ -62,13 +74,13 @@
   padding: 2px 2px 2px 20px;
   text-decoration: none;
   font-size: 1em;
-  color: #101046;
+  color: var(--violeta);
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #ee7a54;
+  color: var(--rosa);
 }
 
 .sidenav .closebtn {
@@ -90,20 +102,7 @@
   .sidenav {padding-top: 15px;}
 }
 
-html {
-  font-size: 1.3em;
-}
-
-
-h1 {
-  font-family: 'sauna-new';
-  font-weight: 900;
-  font-size: 3em;
-}
-
-p {
-  font-size: 1.2em;
-}
+/* INTRO */
 
 .btn-comenzar {
   background-color: var(--rosa);
@@ -111,7 +110,6 @@ p {
   border: 0px solid;
   border-radius: 15px;
   padding: 0.4em 3em;
-  line-height: 4em;
   text-align: center;
   text-decoration: none;
   align-self: center;
@@ -124,6 +122,73 @@ p {
   color: var(--violeta);
 }
 
+
+/* PORTADA VIDEO */
+
+
+  /* VIDEO CONTAINER */
+
+  .video-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .video-container .caption {
+    height: 100dvh;
+    width: 100vw;
+    line-height: 2em;
+    z-index: 1;
+    color: #ede8e8;
+    background: #301647c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .video-container .caja-texto {
+    z-index: 1;
+    text-align: center;
+  }
+
+/* REGLAS GENERALES */
+
+
+html {
+  font-size: 1.3em;
+}
+
+
+
+h1 {
+  font-family: 'sauna-new';
+  font-weight: 900;
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+
+
 .gris {
   background-color: var(--gris);
 }
@@ -133,14 +198,22 @@ p {
 }
 
 .vh100 {
-    height: 100vh;
-    height: 100dvh;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .container {
-  width: 80vw;
-  margin: auto;
+  max-width: 600px;
+  min-width: 50vw;
+  padding: 0;
+  margin: 0 auto;
 }
 
 
@@ -179,7 +252,17 @@ vm-player {
  transform: scale(1.2);
 }
 
-/*RESALTADOS*/
+
+
+
+
+
+
+
+
+
+
+  /*RESALTADOS*/
 
 .highlight {
   display: inline-block;
@@ -236,114 +319,3 @@ vm-player {
     ),
     linear-gradient(182deg, #afd7ff00, #afd7ff4d 8%, #afd7ff00 15%);
 }
-
-
-
-.mapa {
-    background-color: var(--gris);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-centrado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.m2 {
-  margin: 2em;
-}
-
-.p2 {
-  padding: 2em;
-}
-
-
-  /* VIDEO CONTAINER */
-
-.video-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.video-container video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-  z-index: 0;
-}
-
-/* Just styling the content of the div, the *magic* in the previous rules */
-.video-container .caption {
-  height: 100dvh;
-  color: #f1f1f1;
-  line-height: 2em;
-  padding: 0dvh;
-  z-index: 1;
-  position: relative;
-  color: #ede8e8;
-  padding: 10px;
-  background: #301647c9;
-}
-
-.video-container .caja-texto {
-  position: relative;
-  z-index: 1;
-  width: 100cqw;
-  top: 50dvh;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-
-.video-container .caja-texto p, h1 {
-  line-height: 2em;
-  margin-bottom: 1em;
-  z-index: 1;
-}
-  /* Add some content at the bottom of the video/page */
-  .content {
-    position: relative;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    height: 100dvh;
-    width: 80%;
-    background: linear-gradient(to right, #000000dd, #00000000);
-    color: #f1f1f1;
-    line-height: 2em;
-    padding: 0dvh 10dvw;
-  }
-
-  
-  
-  /* Style the button used to pause/play the video */
-  #myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    opacity: 40%;
-    position: relative;
-    top: 90%;
-    left: 90%;
-    transform: translateX(-50%);
-  }
-  
-  #myBtn:hover {
-    background: #ddd;
-    color: black;
-  }
-
-
-
-  

@@ -1,0 +1,33 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="audiocontrols.scss">
+</head>
+<body>
+    <section class="full-size">
+        <div class="audio-enable text__wrap">
+          <p class="text__desc">Definitely put headphones on. You're going to hear zombies scream.</p>
+          <label class="text__label" for="enable-bttn">Click to enable audio</label>
+          <button id="enable-bttn" type="button">Enable</button>
+        </div>
+      </section>
+      <section class="full-size audio-section">
+        <div class="text__wrap">
+          <h3 class="text__h3">Zombies want brains!</h3>
+          <p class="text__desc">Audio will play here on scroll. Play pause button allows user to stop playing it if annoyed.</p>
+          <label class="text__label">Play audio</label>
+          <div class="play-pause__wrap" for="play-pause__bttn">
+            <div class="play-pause__circle">
+              <button id="play-pause__bttn" type="button"><span class="play-pause__span play-pause__icon" role="img" aria-label="Play-pause button icon"></span></button>
+            </div>
+          </div>
+          <audio src="https://assets.codepen.io/1329727/brains2.mp3" class="audio" type="audio/mpeg" loop></audio>
+        </div>
+        <div id="test"></div>
+      </section>
+      <section class="full-size"></section>
+      <script src="audiocontrols.js"></script>
+</body>
+</html>
